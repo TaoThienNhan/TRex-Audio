@@ -1,0 +1,55 @@
+body.login {
+  background: linear-gradient(135deg, #eccc68, #ffa502);
+  position: relative;
+  z-index: 1;
+}
+body.login #login h1 a {
+  background-image: url(../images/login-logo.png);
+  width: 250px;
+  height: 62.54px;
+  background-size: 250px 62.54px;
+}
+body.login #login form#loginform {
+  border: none;
+  color: #333;
+  background: #fff;
+  border-radius: 3px;
+  box-shadow: 0 4px 13px 0 rgba(58, 59, 69, 0.15);
+}
+body.login #login #backtoblog a, body.login #login #nav a {
+  color: #fff;
+}
+body.login form .input, body.login input[type=password], body.login input[type=text] {
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 3px;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+body.login form .input:focus, body.login input[type=password]:focus, body.login input[type=text]:focus {
+  border-color: #C58337;
+  box-shadow: none;
+}
+body.login #wp-submit {
+  background: #C58337;
+  border-color: transparent;
+  color: #fff;
+}
+body.login #wp-submit:focus, body.login #wp-submit:hover {
+  border-color: transparent;
+  color: #fff;
+  outline: none;
+  box-shadow: 0 3px 5px 0 rgba(0, 0, 0, 0.3);
+}
+body.login input[type=checkbox]:focus, body.login input[type=color]:focus, body.login input[type=date]:focus, body.login input[type=datetime-local]:focus, body.login input[type=datetime]:focus, body.login input[type=email]:focus, body.login input[type=month]:focus, body.login input[type=number]:focus, body.login input[type=password]:focus, body.login input[type=radio]:focus, body.login input[type=search]:focus, body.login input[type=tel]:focus, body.login input[type=text]:focus, body.login input[type=time]:focus, body.login input[type=url]:focus, body.login input[type=week]:focus {
+  border-color: #C58337;
+  box-shadow: none;
+}
+body.login input[type=checkbox]:checked::before {
+  content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%2359524c%27%2F%3E%3C%2Fsvg%3E");
+}
+body.login .button-secondary {
+  color: #C58337;
+}
+
+/*# sourceMappingURL=login.css.map */

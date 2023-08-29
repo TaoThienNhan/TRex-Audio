@@ -1,0 +1,75 @@
+$primary_color: #C58337;
+
+body.login {
+    background: linear-gradient(135deg, #eccc68, #ffa502);
+    position: relative;
+    z-index: 1;
+
+    #login {
+        h1 {
+            a {
+                background-image: url(../images/login-logo.png);
+                width: 250px;
+                height: 62.54px;
+                background-size: 250px 62.54px;
+            }
+        }
+
+        form#loginform {
+            border: none;
+            color: #333;
+            background: #fff;
+            border-radius: 3px;
+            box-shadow: 0 4px 13px 0 rgba(58, 59, 69, .15);
+        }
+
+        #backtoblog, #nav {
+            a {
+                color: #fff;
+            }
+        }
+    }
+
+    form .input, input[type=password], input[type=text] {
+        color: #495057;
+        background-color: #fff;
+        border: 1px solid #ced4da;
+        border-radius: 3px;
+        transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+
+        &:focus {
+            border-color: $primary_color;
+            box-shadow: none;
+        }
+    }
+
+    #wp-submit {
+        background: $primary_color;
+        border-color: transparent;
+        color: #fff;
+
+        &:focus, &:hover {
+            border-color: transparent;
+            color: #fff;
+            outline: none;
+            box-shadow: 0 3px 5px 0 rgba(0, 0, 0, .3);
+        }
+    }
+
+    input {
+        &[type=checkbox]:focus, &[type=color]:focus, &[type=date]:focus, &[type=datetime-local]:focus, &[type=datetime]:focus, &[type=email]:focus, &[type=month]:focus, &[type=number]:focus, &[type=password]:focus, &[type=radio]:focus, &[type=search]:focus, &[type=tel]:focus, &[type=text]:focus, &[type=time]:focus, &[type=url]:focus, &[type=week]:focus {
+            border-color: $primary_color;
+            box-shadow: none;
+        }
+    }
+
+    input {
+        &[type=checkbox]:checked::before {
+            content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%2359524c%27%2F%3E%3C%2Fsvg%3E");
+        }
+    }
+
+    .button-secondary {
+        color: $primary_color;
+    }
+}

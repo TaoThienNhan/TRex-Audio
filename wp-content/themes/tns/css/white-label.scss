@@ -1,0 +1,318 @@
+@mixin responsive($size) {
+    @media (max-width: #{$size}px) {
+        @content;
+    }
+}
+
+@import 'admin';
+
+#major-publishing-actions {
+    border-top: 0;
+}
+
+#dashboard-widgets .postbox-container .empty-container {
+    outline: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.is-dragging-metaboxes .metabox-holder .postbox-container .meta-box-sortables {
+    outline: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.is-dragging-metaboxes #dashboard-widgets .meta-box-sortables {
+    outline: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.media-frame.mode-grid .uploader-inline {
+    border: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.drag-drop #drag-drop-area {
+    border: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.theme-browser .theme.add-new-theme a:after {
+    border: 2px dashed rgba(0, 0, 0, .1);
+}
+
+.wp-core-ui select:hover {
+    color: $link-focus;
+}
+
+.postbox, .welcome-panel {
+    border: none;
+    color: #333;
+    background: #fff;
+    padding-bottom: 1px;
+    width: 100%;
+    border-radius: 3px;
+    box-shadow: 0 4px 13px 0 rgba(58, 59, 69, .15);
+}
+
+.welcome-panel {
+    padding: 20px 0;
+}
+
+#screen-meta, #contextual-help-wrap, #screen-options-wrap {
+    width: 100%;
+    border-radius: 0.42rem;
+}
+
+.postbox-header {
+    border-top-left-radius: 0.42rem;
+    border-top-right-radius: 0.42rem;
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.widefat thead td, .widefat thead th {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.widefat tfoot td, .widefat tfoot th {
+    border-color: rgba(0, 0, 0, .1);
+}
+
+.metabox-holder .postbox > h3, .metabox-holder .stuffbox > h3, .metabox-holder h2.hndle, .metabox-holder h3.hndle {
+    padding: 14px 12px;
+    border-top-left-radius: 0.42rem;
+    border-top-right-radius: 0.42rem;
+}
+
+#menu-management .menu-edit, #menu-settings-column .accordion-container, .comment-ays, .feature-filter, .imgedit-group, .manage-menus, .menu-item-handle, .popular-tags, .stuffbox, .widget-inside, .widget-top, .widgets-holder-wrap, .wp-editor-container, p.popular-tags, table.widefat {
+    border: none;
+    color: #333;
+    background: #fff;
+    border-radius: 3px;
+    box-shadow: 0 4px 13px 0 rgba(58, 59, 69, .15);
+}
+
+.widefat td, .widefat th {
+    padding: 14px 10px;
+}
+
+#wpcontent, #wpfooter {
+    margin-left: 260px;
+    margin-top: 28px;
+    @include responsive(782) {
+        margin-top: 0;
+    }
+}
+
+#adminmenu, #adminmenuback, #adminmenuwrap {
+    width: 260px;
+
+    .wp-submenu {
+        width: 260px;
+        left: 260px;
+    }
+}
+
+#adminmenu {
+    .wp-menu-image {
+        img {
+            padding: 12px 0 0 0;
+        }
+    }
+
+    div.wp-menu-image:before {
+        padding: 14px 0;
+        @include responsive(960) {
+            padding: 7px 0;
+        }
+    }
+
+    div.wp-menu-name {
+        padding: 14px 0;
+        @include responsive(782) {
+            padding: 8px 8px 8px 36px;
+        }
+    }
+}
+
+#adminmenu {
+    .wp-has-current-submenu {
+        .wp-submenu a, &.opensub .wp-submenu a {
+            padding: 14px 12px;
+            @include responsive(960) {
+                padding: 5px 12px;
+            }
+        }
+    }
+}
+
+.folded {
+    #adminmenu {
+        .wp-has-current-submenu {
+            .wp-submenu {
+                min-width: 260px;
+                @include responsive(960) {
+                    min-width: 160px;
+                }
+            }
+        }
+    }
+}
+
+#adminmenu {
+    li.wp-has-submenu.wp-not-current-submenu {
+        &:hover {
+            &:after {
+                top: 15px;
+            }
+        }
+    }
+
+    .wp-not-current-submenu {
+        .wp-submenu {
+            min-width: 260px;
+
+            @include responsive(960) {
+                min-width: 160px;
+            }
+        }
+    }
+
+    .wp-submenu {
+        min-width: 260px;
+        @include responsive(960) {
+            min-width: 160px;
+        }
+
+        a {
+            padding: 14px 0;
+            @include responsive(960) {
+                padding: 5px 0;
+            }
+        }
+    }
+}
+
+#adminmenu {
+    .wp-has-current-submenu.opensub .wp-submenu li.current a, .wp-submenu li.current a, a.wp-has-current-submenu:focus + .wp-submenu li.current a {
+        padding: 14px 12px;
+        @include responsive(960) {
+            padding: 5px 12px;
+        }
+        @include responsive(782) {
+            padding: 10px 10px 10px 20px;
+        }
+    }
+}
+
+
+#adminmenu li {
+    &.current a.menu-top {
+        .wp-menu-image img {
+            opacity: 1;
+        }
+    }
+}
+
+#wpadminbar {
+    height: 60px;
+    line-height: 60px;
+
+    #wp-admin-bar-tns-admin-logo {
+        width: 260px;
+        height: 60px;
+        @include responsive(782) {
+            height: 46px;
+            width: 130px;
+        }
+
+        > .ab-item {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    .quicklinks {
+        > ul {
+            > li {
+                > a {
+                    padding: 14px;
+                    @include responsive(782) {
+                        padding: 0 8px 0 7px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+//fix yoast SEO
+.wpseo-admin-submit.wpseo-admin-submit-fixed {
+    left: 260px !important;
+}
+
+@media screen and (max-width: 782px) {
+    .wpseo-admin-submit.wpseo-admin-submit-fixed {
+        left: 0 !important;
+    }
+}
+
+//fix yoast SEO
+.wpseo-admin-submit.wpseo-admin-submit-fixed {
+    left: 260px !important;
+}
+
+@media screen and (max-width: 782px) {
+    .wpseo-admin-submit.wpseo-admin-submit-fixed {
+        left: 0 !important;
+    }
+}
+
+.woocommerce-layout__header {
+    top: 60px !important;
+    width: calc(100% - 260px) !important;
+}
+
+@media (min-width: 783px) and (max-width: 960px) {
+    .woocommerce-layout__header {
+        width: calc(100% - 36px) !important;
+    }
+}
+
+@media (max-width: 782px) {
+    .woocommerce-layout__header {
+        top: 46px !important;
+        width: 100% !important;
+    }
+}
+
+.woocommerce-page {
+    .wp-has-current-submenu {
+        &#menu-posts-product {
+            &:after {
+                border-right-color: transparent;
+            }
+        }
+
+        &#toplevel_page_woocommerce {
+            &:after {
+                top: 5px;
+            }
+        }
+    }
+}
+
+#adminmenu div.wp-menu-image.svg {
+    height: 46px !important;
+}
+
+
+.wf-options-controls {
+    top: 60px;
+    left: 260px;
+}
+
+@media (max-width: 782px) {
+    .wf-options-controls {
+        top: 46px !important;
+    }
+}
+
+@media (min-width: 768px) {
+    #wf-live-traffic-legend {
+        left: 282px;
+    }
+}

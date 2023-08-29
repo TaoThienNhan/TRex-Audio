@@ -1,0 +1,397 @@
+$primary_color_1: #0FAFE9;
+$primary_color_2: #E7F7FD;
+$primary_color_3: #57C7F0;
+$secondary_color_1: #EBEBEB;
+$secondary_color_2: #33334F;
+$dark_color_1: #12151A;
+$alert_error: #FF1D0E;
+$white: #FFFFFF;
+
+.entry-content {
+	.woocommerce {
+		padding: 60px 0 30px 0;
+		font-size: 16px;
+		color: $secondary_color_2;
+		overflow: hidden;
+
+		.col-1, .col-2 {
+			flex: unset;
+			width: 100%;
+		}
+
+		button, .button {
+			@include inline-flex();
+			@include align-items(center);
+			@include justify-content(center);
+			height: 49px;
+			border-radius: 7px;
+			border: 1px solid $primary_color_1;
+			background-color: $primary_color_1;
+			color: $white;
+			font-weight: 400;
+			padding: 5px 20px;
+
+			&:hover {
+				background-color: $primary_color_3;
+				border-color: $primary_color_3;
+			}
+		}
+
+		.woocommerce-MyAccount-navigation {
+			ul {
+				border: 1px solid $secondary_color_1;
+				border-radius: 5px;
+				overflow: hidden;
+
+				li {
+					border-bottom: 1px solid $secondary_color_1;
+
+					&.woocommerce-MyAccount-navigation-link--customer-logout {
+						a {
+							color: $alert_error;
+						}
+					}
+
+					&.is-active {
+						a {
+							background-color: $primary_color_1;
+							color: $white;
+						}
+					}
+
+					&:last-child {
+						border-bottom: 0;
+					}
+
+					a {
+						display: block;
+						padding: 10px 20px;
+						color: $dark_color_1;
+
+						&:hover {
+							background-color: $secondary_color_1;
+							color: $dark_color_1;
+						}
+					}
+				}
+			}
+		}
+
+		.woocommerce-MyAccount-content {
+			a.dashboard-link {
+				display: block;
+				background-color: $primary_color_2;
+				border-radius: 10px;
+				text-align: center;
+				padding: 40px 20px;
+
+				i {
+					font-size: 76px;
+					color: $primary_color_1;
+					margin-bottom: 30px;
+				}
+
+				span {
+					display: block;
+					color: $secondary_color_2;
+					font-weight: 600;
+					font-size: 18px;
+				}
+			}
+		}
+
+		form {
+			label {
+				font-size: 14px;
+				color: $secondary_color_2;
+				display: block;
+				margin-bottom: 10px;
+			}
+
+			input, textarea {
+				width: 100%;
+				display: block;
+				height: 49px;
+				border-radius: 7px;
+				border: 1px solid $secondary_color_1;
+				padding: 5px 20px;
+				color: $secondary_color_2;
+			}
+
+			textarea {
+				height: auto;
+				min-height: 150px;
+			}
+
+			fieldset {
+				padding: 0;
+			}
+
+			&.woocommerce-cart-form {
+				overflow-x: auto;
+
+				table.woocommerce-cart-form__contents {
+					tbody {
+						tr {
+							td {
+								&.product-thumbnail {
+									img {
+										max-width: 80px;
+									}
+								}
+
+								&.product-quantity {
+									input.qty {
+										width: 100px;
+									}
+								}
+
+								&.product-remove {
+									a.remove {
+										@include inline-flex();
+										@include justify-content(center);
+										@include align-items(center);
+										width: 30px;
+										height: 30px;
+										border-radius: 15px;
+										color: $alert_error;
+										background-color: $secondary_color_1;
+
+										&:hover {
+											color: $primary_color_1;
+										}
+									}
+								}
+
+								&.actions {
+									.coupon {
+										@include flexbox();
+										@include flex-wrap(wrap);
+										@include justify-content(space-between);
+										margin-bottom: 15px;
+
+										label {
+											@include flex-basis(100%);
+											max-width: 100%;
+										}
+
+										input {
+											@include flex-basis(calc(100% - 150px));
+											max-width: calc(100% - 150px);
+										}
+
+										button {
+											@include flex-basis(120px);
+											max-width: 120px;
+										}
+									}
+								}
+							}
+						}
+					}
+				}
+			}
+		}
+
+		table {
+			border: 1px solid $secondary_color_1;
+
+			thead {
+				tr {
+					background-color: $primary_color_2;
+					color: $secondary_color_2;
+				}
+			}
+
+			thead, tbody, tfoot {
+				tr {
+					th, td {
+						padding: 10px 20px;
+					}
+				}
+			}
+		}
+	}
+
+	th.product-name {
+		width: 30%;
+	}
+
+	table {
+		word-break: inherit;
+	}
+}
+
+/* START Make the WooCommerce Cart Table Responsive  for Mobile */
+/* CSS published in http://www.jeremycarter.com.au/optimising-woocommerce-checkout-for-mobile/ */
+
+@media screen and (max-width: 767px) {
+
+	/* Force table to not be like tables anymore */
+	.woocommerce-page table.shop_table,
+	.woocommerce-page table.shop_table thead,
+	.woocommerce-page table.shop_table tbody,
+	.woocommerce-page table.shop_table th,
+	.woocommerce-page table.shop_table td,
+	.woocommerce-page table.shop_table tr {
+		display: block;
+	}
+
+	.woocommerce-page table.shop_table td.product-thumbnail {
+		border-top: 0 !important;
+	}
+
+	/* Hide table headers (but not display: none;, for accessibility) */
+	.woocommerce-page table.shop_table thead tr {
+		position: absolute;
+		top: -9999px;
+		left: -9999px;
+	}
+
+	.woocommerce-page table.shop_table tr {
+		/*border: 1px solid #d2d3d3; */
+	}
+
+	.woocommerce-page table.shop_table td {
+		/* Behave  like a "row" */
+		position: relative;
+		padding-left: 30% !important;
+		text-align: right;
+	}
+
+	.woocommerce-page table.shop_table td.product-spacer {
+		border-color: #FFF;
+		height: 10px;
+	}
+
+	.woocommerce-page table.shop_table td:before {
+		/* Now like a table header */
+		position: absolute;
+		/* Top/left values mimic padding */
+		top: 6px;
+		left: 6px;
+		width: 45%;
+		padding-right: 10px;
+		white-space: nowrap;
+		text-align: left;
+	}
+
+	/*
+	Label the data
+	*/
+	.woocommerce-page table.shop_table td.product-remove:before {
+		content: "Xoá";
+	}
+
+	.woocommerce-page table.shop_table td.product-thumbnail:before {
+		content: "Ảnh";
+	}
+
+	.woocommerce-page table.shop_table td.product-name:before {
+		content: "Sản phẩm";
+	}
+
+	.woocommerce-page table.shop_table td.product-price:before {
+		content: "Giá";
+	}
+
+	.woocommerce-page table.shop_table td.product-quantity:before {
+		content: "Số lượng";
+	}
+
+	.woocommerce-page table.shop_table td.product-subtotal:before {
+		content: "Tạm tính";
+	}
+
+	.woocommerce-page table.shop_table td.product-total:before {
+		content: "Tổng cộng";
+	}
+
+	.woocommerce .quantity,
+	.woocommerce #content .quantity,
+	.woocommerce-page .quantity,
+	.woocommerce-page #content .quantity {
+		margin: 0;
+	}
+
+	.quantity {
+		@include flexbox();
+		@include justify-content(flex-end);
+	}
+
+	.woocommerce-page table.cart td.actions,
+	.woocommerce-page #content table.cart td.actions {
+		text-align: left;
+		border: 0;
+		padding-left: 6px !important;
+	}
+
+	.woocommerce-page table.cart td.actions .button.alt,
+	.woocommerce-page #content table.cart td.actions .button.alt {
+		float: left;
+		margin-top: 10px;
+	}
+
+	.woocommerce-page table.cart td.actions div,
+	.woocommerce-page #content table.cart td.actions div,
+	.woocommerce-page table.cart td.actions input,
+	.woocommerce-page #content table.cart td.actions input {
+		margin-bottom: 10px;
+	}
+
+	.woocommerce-page .cart-collaterals .cart_totals {
+		float: left;
+		width: 100%;
+		text-align: left;
+	}
+
+	.woocommerce-page .cart-collaterals .cart_totals th,
+	.woocommerce-page .cart-collaterals .cart_totals td {
+		border: 0 !important;
+	}
+
+	.woocommerce-page .cart-collaterals .cart_totals table tr.cart-subtotal td,
+	.woocommerce-page .cart-collaterals .cart_totals table tr.shipping td,
+	.woocommerce-page .cart-collaterals .cart_totals table tr.total td {
+		padding-left: 6px !important;
+	}
+
+	.woocommerce-page table.shop_table tr.cart-subtotal td,
+	.woocommerce-page table.shop_table tr.shipping td,
+	.woocommerce-page table.shop_table tr.total td,
+	.woocommerce-page table.shop_table.order_details tfoot th,
+	.woocommerce-page table.shop_table.order_details tfoot td {
+		padding-left: 6px !important;
+		border: 0 !important;
+	}
+
+	.woocommerce-page table.shop_table tbody {
+		padding-top: 10px;
+	}
+
+	.woocommerce .col2-set .col-1,
+	.woocommerce-page .col2-set .col-1,
+	.woocommerce .col2-set .col-2,
+	.woocommerce-page .col2-set .col-2,
+	.woocommerce form .form-row-first,
+	.woocommerce form .form-row-last,
+	.woocommerce-page form .form-row-first,
+	.woocommerce-page form .form-row-last {
+		float: none;
+		width: 100%;
+	}
+
+	.woocommerce .order_details ul,
+	.woocommerce-page .order_details ul,
+	.woocommerce .order_details,
+	.woocommerce-page .order_details {
+		padding: 0;
+	}
+
+	.woocommerce .order_details li,
+	.woocommerce-page .order_details li {
+		clear: left;
+		margin-bottom: 10px;
+		border: 0;
+	}
+}

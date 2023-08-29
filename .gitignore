@@ -1,0 +1,60 @@
+# Wordpress - ignore core, configuration, examples, uploads and logs.
+# https://github.com/github/gitignore/blob/main/WordPress.gitignore
+
+# Core
+#
+# Note: if you want to stage/commit WP core files
+# you can delete this whole section/until Configuration.
+/wp-admin/
+/wp-content/languages
+/wp-includes/
+/index.php
+/license.txt
+/readme.html
+/wp-*.php
+!wp-config-sample.php
+/xmlrpc.php
+
+# Configuration
+wp-config.php
+
+# Uploads
+/wp-content/uploads/
+
+# Log files
+*.log
+
+# htaccess
+/.htaccess
+
+# All plugins
+#
+# Note: If you wish to whitelist plugins,
+# uncomment the next line
+#/wp-content/plugins
+
+# WooCommerce
+/wp-content/plugins/woocommerce
+
+# All themes
+#
+# Note: If you wish to whitelist themes,
+# uncomment the next line
+#/wp-content/themes
+
+# PhpStorm idea
+/.idea
+
+# Child theme assets dist
+/wp-content/themes/tns-child/assets/dist
+
+# Child theme assets src
+/wp-content/themes/tns-child/assets/src/css/style.css
+/wp-content/themes/tns-child/assets/src/css/style.css.map
+
+# Node modules
+/wp-content/themes/tns-child/node_modules/
+
+# Package lock
+# https://github.com/pixelwatt/method/blob/master/package.json
+/wp-content/themes/tns-child/package-lock.json

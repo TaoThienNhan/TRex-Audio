@@ -1,0 +1,35 @@
+/* Title Area
+--------------------------------------------- */
+.site-title {
+	margin-bottom: 0;
+	font-size: $site-title--font-size;
+	font-weight: $font-weight--semibold;
+	line-height: $line-height--smaller;
+
+	a,
+	a:focus,
+	a:hover {
+		color: $site-title__link--font-color;
+		text-decoration: none;
+	}
+
+	.wp-custom-logo & {
+		overflow: hidden;
+		clip: rect(0, 0, 0, 0);
+		position: absolute !important;
+		width: 1px;
+		height: 1px;
+		border: 0;
+		word-wrap: normal !important;
+	}
+}
+
+.site-description {
+	overflow: hidden;
+	clip: rect(0, 0, 0, 0);
+	position: absolute !important;
+	width: 1px;
+	height: 1px;
+	border: 0;
+	word-wrap: normal !important;
+}

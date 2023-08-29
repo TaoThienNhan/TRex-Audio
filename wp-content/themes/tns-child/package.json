@@ -1,0 +1,21 @@
+{
+  "name": "tns-child",
+  "description": "Cảm ơn bạn đã sử dụng dịch vụ của Tây Nam Solutions. Nghiêm cấm sao chép và phát hành lại với mọi hình thức.",
+  "version": "1.0.0",
+  "author": "Minh Nhựt",
+  "authorURI": "https://nhut.me",
+  "scripts": {
+    "prod": "gulp prod"
+  },
+  "license": "",
+  "devDependencies": {
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-dart-sass": "^1.0.2",
+    "gulp-uglify": "^3.0.2",
+    "gulp-plumber": "1.2.1",
+    "gulp-squoosh": "0.9.0",
+    "gulp-if": "3.0.0"
+  }
+}
