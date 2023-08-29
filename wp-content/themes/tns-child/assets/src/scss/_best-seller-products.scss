@@ -1,6 +1,9 @@
 .best-seller-products-wrapper {
   background: black;
   .product-single {
+    transition: all .5s ease-in-out;
+    background: #4c4c4c;
+    opacity: 1;
     .header-product-single {
       position: relative;
       .logo {
@@ -15,24 +18,43 @@
         right: 20px;
         border-radius: 0 0 20px 20px;
       }
+
+
     }
 
     .product-single-footer {
       .left-product-single-footer {
         .product-name {
-          font-size: 11px;
+          font-size: 13px;
         }
 
         .price {
           font-size: 16px;
         }
       }
+
+   
+    }
+  }
+
+  .product-single-container:hover {
+    border: 1px solid #ffcc00 !important;
+    transition: all .3s linear;
+    .rate i {
+      color: white !important;
     }
 
-    .right-product-footer {
-      .detail-text {
-        font-size: 13px;
-      }
+    .price {
+      color: black !important;
     }
+
+    .product-name {
+      color: black !important;
+    }
+
+  }
+
+  .detail-text:hover {
+    background-color: rgba(173, 173, 173, 0.353);
   }
 }
