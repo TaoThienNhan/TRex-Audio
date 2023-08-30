@@ -105,3 +105,25 @@ function tns_theme_support(){
 }
 
 add_action('after_setup_theme', 'tns_theme_support', 9);
+
+function my_wp_nav_menu_objects($items, $args) {
+    foreach ($items as &$item) {
+        $icon = get_field('menu_icon', $item);
+        $submenu_arrow = '';
+
+        if ($icon) {
+            $item->title = '<div class="menu-item-content d-flex align-item-center"><div class="menu-item-icon d-flex align-items-center me-3">' . wp_get_attachment_image($icon) . '</div><div class="menu-item-text">' . $item->title . '</div></div>';
+        }
+
+        if (in_array('menu-item-has-children', $item->classes)) {
+            $submenu_arrow = '<span class="submenu-arrow"><i class="fa-solid fa-angle-right"></i></span>'; // Add a right arrow for items with submenus
+        }
+
+        $item->title = $item->title . $submenu_arrow;
+    }
+
+    return $items;
+}
+add_filter('wp_nav_menu_objects', 'my_wp_nav_menu_objects', 10, 2);
+
+

@@ -19,9 +19,14 @@
 			<a href="#" class="phone-icon d-flex justify-content-center align-items-center text-black-50" style="background: url( <?= get_stylesheet_directory_uri(); ?>/assets/src/images/background-gold.png)">
 				<i class="fas fa-phone-volume"></i>
 			</a>
-			<button class="menu-cate-mobile text-black-50" style="background: url( <?= get_stylesheet_directory_uri(); ?>/assets/src/images/background-gold.png)">
-				<i class="fa-solid fa-bars"></i>
-			</button>
+			<?php
+			wp_nav_menu(array(
+				'theme_location' => 'danh-muc-menu',
+				'container' => 'nav',
+				'container_id' => 'mmenu',
+			));
+			?>
+			<button id="mmenu-btn" class="menu-cate-mobile" style="background: url( <?= get_stylesheet_directory_uri(); ?>/assets/src/images/background-gold.png)"><i class="fa-solid fa-bars"></i></button>
 		</div>
 	</div>
 </div>

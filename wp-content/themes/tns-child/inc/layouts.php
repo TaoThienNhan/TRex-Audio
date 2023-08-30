@@ -11,7 +11,7 @@ add_action('tns_header', function (){
  * The landing page for our theme
  */
 add_action('tns_landing', function (){
-
+    get_template_part('template-parts/category-resolution');
 });
 
 /**

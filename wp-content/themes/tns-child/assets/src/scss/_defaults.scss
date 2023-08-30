@@ -215,3 +215,19 @@ th {
 		}
 	}
 }
+
+@media (max-width: 600px) {
+	#wpadminbar {
+		position: fixed !important;
+	}
+}
+
+.mm-panels {
+	.submenu-arrow {
+		display: none !important;
+	}
+}
+
+.menu-item-icon {
+	width: 30px !important;
+}
