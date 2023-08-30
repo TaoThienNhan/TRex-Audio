@@ -16,3 +16,12 @@ endif;
  * Include layouts.php
  */
 require_once get_theme_file_path() . '/inc/layouts.php';
+
+function theme_name_register_menus() {
+    register_nav_menus(
+        array(
+            'danh-muc-menu' => 'Menu Danh Mục'
+        )
+    );
+}
+add_action('init', 'theme_name_register_menus');
