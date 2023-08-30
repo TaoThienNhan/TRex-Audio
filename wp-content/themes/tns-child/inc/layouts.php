@@ -12,6 +12,8 @@ add_action('tns_header', function (){
  */
 add_action('tns_landing', function (){
     get_template_part('template-parts/category-resolution');
+    get_template_part('template-parts/best-seller-products');
+
 });
 
 /**
