@@ -1,0 +1,46 @@
+.footer {
+  .text-location {
+    p {
+      font-size: 11px;
+      color: #f6da62;
+    }
+  }
+
+  .contact-footer {
+    p {
+      font-size: 11px;
+      line-height: 30px;
+    }
+  }
+
+  .rules {
+    strong {
+      font-size: 12px;
+      color: #f6da62;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+
+  .nav-footer {
+    strong {
+      font-size: 12px;
+      color: #f6da62;
+    }
+
+    p {
+      font-size: 11px;
+    }
+  }
+
+  .footer-bottom {
+    border-top: 5px gray dashed;
+
+    .text-design-by {
+      font-size: 11px;
+      color: #9d9f9e;
+    }
+  }
+}
