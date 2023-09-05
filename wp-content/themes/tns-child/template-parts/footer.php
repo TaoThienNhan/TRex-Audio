@@ -2,7 +2,7 @@
     .footer {
         background: url('<?= get_stylesheet_directory_uri(); ?>/assets/src/images/bg-footer.png');
         background-size: cover;
-        background-position: center;
+        background-position: bottom;
     }
 </style>
 
@@ -15,8 +15,8 @@
             <div class="col-sm-8 d-flex justify-content-sm-end align-items-center">
                 <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/dadangky.png" alt="" class="img-fluid my-3">
             </div>
-            
-            <div class="col-md-4 pt-1 my-3">
+
+            <div class="col-md-4 pt-2 my-3">
                 <div class="location-container">
                     <div class="location d-flex justify-content-start align-items-center">
                         <i class="fas fa-map-marker-alt fs-3 text-white"></i>
@@ -53,26 +53,47 @@
             </div>
             <div class="col-md-8 col-lg-7 offset-lg-1 my-3">
                 <div class="d-block d-md-flex justify-content-between">
-                    <div class="contact-footer pt-1">
+                    <div class="contact-footer pt-1 mb-3 mb-lg-0">
                         <div class="d-flex">
                             <div class="contact-footer-left text-location">
-                                <p class="mb-0 me-3">HỖ TRỢ KĨ THUẬT: </p>
-                                <p class="mb-0 me-3">TƯ VẤN ĐẮT HÀNG: </p>
-                                <p class="mb-0 me-3">HOTLINE1: </p>
-                                <p class="mb-0 me-3">HOTLINE2: </p>
-                            </div>
-
-                            <div class="contact-footer-right text-location">
-                                <p class="text-white mb-0"> 0985.86.87.86</p>
-                                <p class="text-white mb-0"> 0985.86.87.65 </p>
-                                <p class="text-white mb-0"> 0393.65.33.65</p>
-                                <p class="text-white mb-0"> 0963.65.33.65</p>
+                                <p class="mb-0 me-3">
+                                    <span class="w-50">
+                                        HỖ TRỢ KĨ THUẬT:
+                                    </span>
+                                    <span class="text-white w-50">
+                                        0985.86.87.86
+                                    </span>
+                                </p>
+                                <p class="mb-0 me-3">
+                                    <span class="w-50">
+                                        TƯ VẤN ĐẮT HÀNG:
+                                    </span>
+                                    <span class="text-white w-50">
+                                        0985.86.87.65
+                                    </span>
+                                </p>
+                                <p class="mb-0 me-3">
+                                    <span class="w-50">
+                                        HOTLINE1:
+                                    </span>
+                                    <span class="text-white w-50">
+                                        0393.65.33.65
+                                    </span>
+                                </p>
+                                <p class="mb-0 me-3">
+                                    <span class="w-50">
+                                        HOTLINE2:
+                                    </span>
+                                    <span class="text-white w-50">
+                                        0963.65.33.65
+                                    </span>
+                                </p>
                             </div>
                         </div>
                         <p class="text-light mb-0">Email: t-rexaudio@gmail.com</p>
                     </div>
 
-                    <div class="rules">
+                    <div class="rules mb-3 mb-lg-0">
                         <strong class="pb-1">ĐIỀU KHOẢN SỬ DỤNG</strong>
                         <div>
                             <p class="text-light mb-0">Chính sách bảo hành</p>
@@ -84,7 +105,7 @@
                         </div>
                     </div>
 
-                    <div class="nav-footer">
+                    <div class="nav-footer mb-0 mb-lg-0">
                         <strong class="pb-1">TRANG CHỦ</strong>
                         <div>
                             <a href="">
@@ -119,7 +140,7 @@
                 <a href=""> <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/zalo.png" alt="" class="img-fluid me-2 me-lg-3"></a>
             </div>
             <div class="col-lg-6 mt-3 mt-lg-0 text-uppercase text-light text-center text-lg-end text-design-by">
-            <?php echo date('Y'); ?> © <a href="" class="text-light ">T-REX AUDIO</a> All Rights Reserved. Designed by <a href="" class="text-light ">Tay Nam Solution.</a> 
+                <?php echo date('Y'); ?> © <a href="" class="text-light ">T-REX AUDIO</a> All Rights Reserved. Designed by <a href="" class="text-light ">Tay Nam Solution.</a>
             </div>
         </div>
     </div>
