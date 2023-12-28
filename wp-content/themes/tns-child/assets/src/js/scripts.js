@@ -19,3 +19,11 @@ jQuery(document).ready(function($) {
         mmenuAPI.open();
     });
 });
+
+jQuery(document).ready(function($) {
+    $('.img-gallery a').on('click', function(e) {
+        e.preventDefault();
+        var image_url = $(this).attr('href');
+        $('.main-image img').attr('src', image_url).removeAttr('srcset');
+    });
+});

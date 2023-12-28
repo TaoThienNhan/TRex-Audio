@@ -1,0 +1,31 @@
+.pagination {
+  list-style-type: none;
+  ul {
+    list-style-type: none !important;
+    display: flex;
+    flex-wrap: wrap;
+
+    li {
+      list-style-type: none !important;
+      text-align: center;
+      background-color: #feb904;
+      margin: 10px;
+      border-radius: 10px;
+
+      a {
+        padding: 20px;
+        color: white;
+      }
+    }
+  }
+
+  .page-numbers {
+    padding: 10px;
+    list-style-type: none !important;
+    text-align: center;
+    background-color: #feb904;
+    margin: 10px;
+    border-radius: 10px;
+    color: white !important;
+  }
+}

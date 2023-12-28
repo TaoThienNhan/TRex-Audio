@@ -231,3 +231,32 @@ th {
 .menu-item-icon {
 	width: 30px !important;
 }
+
+.woocommerce-breadcrumb {
+	padding: 20px 0;
+	a {
+		color: white;
+	}
+}
+
+.related-products {
+	img {
+		width: 100%;
+		min-height: 320px;
+		height: auto;
+	}
+
+	.title a{
+		font-size: 30px;
+		font-weight: bold;
+		margin-bottom: 50px;
+		color: white !important;
+	}
+}
+
+.breadcrumb {
+	a, span {
+		color: white !important;
+		opacity: 0.5 !important;
+	}
+}

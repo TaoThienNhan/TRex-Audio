@@ -1,45 +1,47 @@
 .footer {
   .text-location {
     p {
-      font-size: 11px;
+      font-size: 16px;
       color: #f6da62;
     }
   }
 
   .contact-footer {
     p {
-      font-size: 11px;
+      font-size: 16px;
       line-height: 30px;
     }
   }
 
   .rules {
     strong {
-      font-size: 12px;
+      font-size: 16px;
       color: #f6da62;
     }
 
-    p {
-      font-size: 11px;
+    a {
+      font-size: 16px;
+      color: white;
     }
   }
 
   .nav-footer {
     strong {
-      font-size: 12px;
+      font-size: 16px;
       color: #f6da62;
     }
 
-    p {
-      font-size: 11px;
+    a {
+      font-size: 16px;
+      color: white;
     }
   }
 
   .footer-bottom {
-    border-top: 5px gray dashed;
+    border-top: 2px gray dashed;
 
     .text-design-by {
-      font-size: 11px;
+      font-size: 14px;
       color: #9d9f9e;
     }
   }

@@ -23,24 +23,21 @@
                     <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/banner.jpg" alt="">
                 </div>
                 <div class="row m-0 p-0 resolution">
-                    <div class="col resolution-item d-flex justify-content-center align-items-center">
-                        <div class="resolution-item-border gap-1 d-flex justify-content-center align-items-center">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/money-bag.png" alt="">
-                            <div class="d-none d-md-block">Hỗ Trợ trả góp</div>
-                        </div>
-                    </div>
-                    <div class="col resolution-item d-flex justify-content-center align-items-center">
-                        <div class="resolution-item-border gap-1 d-flex justify-content-center align-items-center">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/maintenance.png" alt="">
-                            <div class="d-none d-md-block">Thi công lắp đặt & Hướng dẫn sử dụng</div>
-                        </div>
-                    </div>
-                    <div class="col resolution-item  d-flex justify-content-center align-items-center">
-                        <div class="resolution-item-border gap-1 d-flex justify-content-center align-items-center">
-                            <img src="<?= get_stylesheet_directory_uri(); ?>/assets/src/images/shield.png" alt="">
-                            <div class="d-none d-md-block">Bảo hành 2 năm tất cả sản phẩm</div>
-                        </div>
-                    </div>
+                    <?php
+                        if (have_rows('cam_ket', 'option')) {
+                            while (have_rows('cam_ket', 'option')) {
+                                the_row();
+                                ?>
+                                <div class="col resolution-item d-flex justify-content-center align-items-center">
+                                    <div class="resolution-item-border gap-1 d-flex justify-content-center align-items-center">
+                                        <img src="<?=get_sub_field('cam_ket_icon')?>" alt="">
+                                        <div class="d-none d-md-block"><?=get_sub_field('cam_ket_content')?></div>
+                                    </div>
+                                </div>
+                                <?php
+                            }
+                        }
+                    ?>
                 </div>
             </div>
         </div>
