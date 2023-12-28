@@ -55,12 +55,10 @@
                                                 <strong class="text-white me-3 price"><?php echo wc_price($product->get_sale_price()) ?></strong>
                                                 <del class="text-secondary detail-text"><?php echo wc_price($product->get_regular_price()) ?></del>
                                             <?php else : ?>
-                                            <?php echo wc_price($product->get_regular_price()) ?>
+                                                <?php echo wc_price($product->get_regular_price()) ?>
                                             <?php endif; ?>
-
                                         </div>
-                                        <div
-                                            class="right-product-single-footer col-lg-5 d-flex justify-content-center justify-content-lg-end ">
+                                        <div class="right-product-single-footer col-lg-5 d-flex justify-content-center justify-content-lg-end ">
                                             <a href="<?=$product->get_permalink()?>"
                                                class="text-white text-center px-3 py-4 border-white border detail-text">
                                                 <h6 class="m-0">CHI TIẾT</h6></a>

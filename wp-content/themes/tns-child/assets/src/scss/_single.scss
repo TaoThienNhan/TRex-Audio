@@ -1,0 +1,55 @@
+.single-wrapper {
+	padding-top: 50px;
+	color: white;
+
+	.post-thumbnail img{
+		width: 100%;
+		min-height: 478px;
+		height: auto;
+		border-radius: 25px;
+	}
+
+	.post-item {
+		min-height: 130px;
+		height: auto;
+		margin-bottom: 50px;
+	}
+
+
+	.post-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.post-thumbnail-2 {
+		width: 100%;
+		min-height: 90px;
+		height: auto;
+		border-radius: 10px;
+	}
+
+	.breadcrumb {
+		a, span {
+			color: black;
+			opacity: 0.5;
+		}
+	}
+
+	a {
+		color: #031424;
+	}
+
+	.order-service-title {
+		font-size: 30px;
+		font-weight: 500;
+		font-family: "SF Pro Text", sans-serif;
+	}
+
+	.col-lg-4 {
+		.card {
+			padding-left: 25px;
+			padding-right: 25px;
+			border-radius: 20px;
+		}
+	}
+}

@@ -13,7 +13,9 @@ add_action('tns_header', function (){
 add_action('tns_landing', function (){
     get_template_part('template-parts/category-resolution');
     get_template_part('template-parts/best-seller-products');
-
+    get_template_part('template-parts/product-category');
+    get_template_part('template-parts/home-contact');
+    get_template_part('template-parts/footer');
 });
 
 /**
@@ -27,9 +29,9 @@ add_action('tns_loop', function (){
  * The template for displaying all pages
  */
 add_action('tns_page', function (){
-	if (is_cart() || is_checkout() || is_account_page() || is_wc_endpoint_url()):
+	/*if (is_cart() || is_checkout() || is_account_page() || is_wc_endpoint_url()):*/
 		get_template_part('template-parts/content-full-width');
-	endif;
+	/*endif;*/
 });
 
 /**
@@ -43,7 +45,7 @@ add_action('tns_single', function (){
  * The template for displaying archive pages
  */
 add_action('tns_archive', function (){
-
+    get_template_part('template-parts/archive');
 });
 
 /**

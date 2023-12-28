@@ -1,0 +1,63 @@
+.archive-product-wrapper {
+	.cate-title{
+		font-size: 24px;
+		font-weight: bold;
+		color: #33393D;
+		text-transform: uppercase;
+	}
+
+	li {
+		list-style-type: disc !important;
+		margin-left: 20px;
+
+		a {
+			font-size: 17px;
+			color: #69747C;
+		}
+	}
+
+	.products {
+		.img {
+
+			img {
+				width: 100%;
+				height: 100%;
+			}
+		}
+
+		.name {
+
+			a {
+				font-size: 20px;
+				font-weight: bold;
+				text-transform: uppercase;
+				color: #69747C;
+			}
+
+		}
+	}
+
+	.note {
+		color: #FF4E00;
+		font-size: 20px;
+		text-transform: uppercase;
+		font-weight: bold;
+	}
+
+	.star-rate {
+		padding-top: 5px;
+		 i {
+			 font-size: 14px;
+			 color: yellow;
+			 margin: 2px;
+		 }
+	}
+
+	.orderby {
+		height: 52px;
+		border: 1px solid #E1E2E6;
+		padding: 0 20px 0 20px;
+		outline: 0;
+		color: #69747C;
+	}
+}

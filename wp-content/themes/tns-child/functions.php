@@ -20,8 +20,18 @@ require_once get_theme_file_path() . '/inc/layouts.php';
 function theme_name_register_menus() {
     register_nav_menus(
         array(
-            'danh-muc-menu' => 'Menu Danh Mục'
+            'danh-muc-menu' => 'Menu Danh Mục',
+            'chinh-sach-menu' => 'Menu Chính Sách',
+            'danh-muc-footer-menu' => 'Menu Danh Mục Footer'
         )
     );
 }
 add_action('init', 'theme_name_register_menus');
+
+add_filter('loop_shop_per_page', 'new_loop_shop_per_page', 20);
+
+function new_loop_shop_per_page($cols)
+{
+    $cols = 12;
+    return $cols;
+}
